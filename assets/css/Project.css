@@ -1,0 +1,252 @@
+
+.robo::before,
+.robo::after {
+  content: '"'; /* Add quotes before and after the text */
+  color: #5a3ebc; /* Change the color of the quotes */
+  font-size: 1.5em; /* Increase the size of the quotes */
+  vertical-align: middle; /* Align the quotes vertically with the text */
+}
+
+.styled-para {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8; /* Increased line spacing for better readability */
+  color: #444; /* Slightly lighter text color for a softer look */
+  font-size: 1.1rem; /* Slightly larger font size */
+  margin: 15px 0; /* More spacing around the paragraph */
+  padding: 15px; /* Add padding for breathing space */
+  background: #f9f9f9; /* Light background color for contrast */
+  border-left: 5px solid #5a3ebc; /* Add a left border to highlight the paragraph */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.styled-para .para-para {
+  display: block; /* Each bullet point on a new line */
+  margin-bottom: 12px; /* Increased spacing between bullet points */
+  padding-left: 20px; /* Indentation for bullets */
+  position: relative; /* Positioning for custom bullet points */
+}
+
+.styled-para .para-para::before {
+  content: '•'; /* Custom bullet point */
+  color: #5a3ebc; /* Bullet point color */
+  font-size: 1.5rem; /* Larger bullet point size */
+  position: absolute; /* Absolute positioning */
+  left: 0; /* Align to the left */
+  top: -2px; /* Align vertically with the text */
+}
+
+.styled-para strong {
+  color: #5a3ebc; /* Highlighted color for "Learnings" */
+  font-weight: bold; /* Bold text for emphasis */
+  background: #eae8ff; /* Light background for emphasis */
+  padding: 2px 4px; /* Padding around the highlighted text */
+  border-radius: 4px; /* Rounded corners for highlighted text */
+}
+
+.project-titl {
+  color: #794efc; /* Change the color of the title */
+  font-family: monospace; /* Use the Roboto font */
+  font-size: 2rem; /* Set the font size */
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center align the title */
+  margin: 10px 0; /* Add some margin for spacing */
+  text-transform: uppercase; /* Make the text uppercase */
+  letter-spacing: 2px; /* Add some letter spacing */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+}
+
+/* CSS for grid layout */
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0, auto;
+  gap: 20px; /* Adjust the gap as needed */
+  padding: 10px;
+}
+
+/* Maintain the existing style for project containers and cards */
+.project-container,
+.project-container-2,
+.project-container-3{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  align-items: center;
+  padding: 3.5% 0; /* Adjust margin as needed */
+}
+
+.main-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-height: auto;
+  max-width: 300px; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.main-card:hover {
+  transform: translateY(-10px);
+}
+
+.main-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-card .content {
+  padding: 20px;
+}
+
+.main-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 10px;
+}
+.video-container {
+  position: relative;
+  display: inline-block;
+}
+
+.video-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.play-button i {
+  pointer-events: none;
+}
+
+.main-card .btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.main-card .btn {
+  background: #794efc;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.main-card .btn:hover {
+  background: #5a3ebc;
+}
+
+.main-card .btn i {
+  margin-right: 5px;
+}
+
+
+.project {
+  position: relative; /* Ensure the section can contain the absolutely positioned pseudo-element */
+  overflow: hidden; /* Hide overflow to ensure the background doesn't spill out */
+}
+
+.project::before {
+  content: ''; /* Inserts an empty content */
+  position: absolute; /* Positions the element absolutely */
+  top: 0; /* Aligns the element to the top */
+  left: 0; /* Aligns the element to the left */
+  width: 100%; /* Sets the width to 100% */
+  height: 100%; /* Sets the height to 100% */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0,0,0,0.05)); /* Adds a gradient background */
+  z-index: -1; /* Positions the element behind other elements */
+  animation: rotateBg 15s linear infinite; /* Applies a rotating background animation */
+}
+
+@keyframes rotateBg {
+  0% {
+    transform: rotate(0deg); /* Starts rotation at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Ends rotation at 360 degrees */
+  }
+}
+
+/* For tablets and small screens (landscape mode) */
+@media screen and (max-width: 1024px) {
+  .box-container {
+    grid-template-columns: repeat(2, 1fr); /* Display two columns */
+  }
+
+  .main-card {
+    max-width: 90%; /* Increase card width */
+    margin: auto; /* Center the cards */
+  }
+}
+
+/* For mobile devices (portrait mode) */
+@media screen and (max-width: 768px) {
+  .box-container {
+    grid-template-columns: 1fr; /* Display one column */
+  }
+
+  .main-card {
+    max-width: 100%; /* Full width of the container */
+    margin: 10px auto; /* Add margin for spacing */
+  }
+
+  .project-container, .project-container-2, .project-container-3 {
+    padding: 5% 0; /* Reduce padding for smaller screens */
+  }
+
+  .project-titl {
+    font-size: 1.5rem; /* Adjust title size */
+  }
+
+  .styled-para {
+    font-size: 1rem; /* Adjust paragraph font size */
+    padding: 10px; /* Reduce padding */
+    line-height: 1.5; /* Adjust line height */
+  }
+
+  .video-container img {
+    max-height: 200px; /* Limit image height */
+  }
+}
+
+/* For very small devices (extra small phones) */
+@media screen and (max-width: 480px) {
+  .main-card {
+    max-width: 95%; /* Slightly less than full width */
+  }
+
+  .project-titl {
+    font-size: 1.25rem; /* Further reduce title size */
+  }
+
+  .styled-para {
+    font-size: 0.9rem; /* Smaller paragraph text */
+  }
+
+  .play-button {
+    font-size: 1.5rem; /* Reduce play button size */
+    padding: 5px; /* Adjust padding */
+  }
+}
+

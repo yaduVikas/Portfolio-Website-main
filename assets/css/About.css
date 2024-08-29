@@ -1,0 +1,423 @@
+.about-section {
+  background: #f7f7f7;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-row {
+  display: flex;
+  flex-direction: column;
+  gap: -80rem;
+  width: 100%;
+}
+
+.about-intro-image-container {
+  margin-left: 2%;
+  margin-top: 4%;
+  margin-right: 3%;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-image {
+  margin-right: 2%;
+}
+
+.about-image img {
+  
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.about-content {
+  flex: 1;
+  margin-top: -4%;
+}
+
+.about-content h3 {
+  color: #222; /* Slightly lighter color for a softer look */
+  font-size: 3.2rem; /* Slightly larger for prominence */
+  font-weight: 700; /* Bold weight for emphasis */
+  margin-bottom: 0.8rem; /* Space between heading and paragraph */
+  position: relative; /* Position for additional styling */
+  padding: 0.5rem 0; /* Add padding for spacing */
+
+}
+
+.about-content .about-tag {
+  font-size: 1.6rem; /* Slightly larger for better emphasis */
+  color: #007bff; /* Use a bright blue for contrast */
+  font-weight: 600; /* Maintain bold weight for prominence */
+  margin-top: 0.25rem; /* Reduced top margin for closer alignment with heading */
+  display: block; /* Ensure tag displays on its own line */
+  text-transform: uppercase; /* Uppercase for a modern look */
+  letter-spacing: 0.05rem; /* Slight letter spacing for clarity */
+  position: relative; /* Position for additional styling */
+
+}
+
+.about-content .about-tag::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff; /* Blue color for consistency */
+  margin-top: 0.3rem; /* Space between tag and underline */
+}
+
+
+.about-content p {
+  font-size: 1.6rem; /* Slightly larger for better readability */
+  line-height: 1.8; /* Improve readability with increased line height */
+  color: #333; /* Darker color for better contrast */
+  margin-top: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400; /* Lighten font weight for a more modern look */
+  text-align: justify; /* Align text for a clean look */
+  position: relative; /* Position for additional styling */
+  padding: 0 1rem; /* Add padding for better text spacing */
+
+}
+
+.about-content p::before {
+  content: "\201C"; /* Add quotation mark before text */
+  font-size: 4rem; /* Large size for emphasis */
+  color: #007bff; /* Blue color for visual interest */
+  position: absolute;
+  left: -1.5rem; /* Position it to the left of the text */
+  top: -1.5rem; /* Align it vertically with the text */
+}
+
+.about-content p::after {
+  content: "\201D"; /* Add closing quotation mark after text */
+  font-size: 4rem; /* Large size for emphasis */
+  color: #007bff; /* Blue color for visual interest */
+  position: absolute;
+  right: 14rem; /* Position it to the right of the text */
+  bottom: -2.2rem; /* Align it vertically with the text */
+}
+
+
+.about-buttons {
+  margin-top: 2rem;
+  margin-left: 22%;
+}
+
+.about-buttons .about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #9924ee, #5b14b8);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.about-buttons .about-button:hover {
+  background: linear-gradient(45deg, #1a047e, #3b028f);
+  transform: translateX(5px);
+}
+
+.about-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  /* margin-top: 2rem; */
+}
+
+.about-certification-card,
+.about-education-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 25%; /* Each card takes 25% width */
+  text-align: center;
+  padding: 20px;
+}
+
+.about-certification-card:hover,
+.about-education-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-certification-card h3,
+.about-education-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-certification-text{
+  border-left: 5px solid #5a3ebc; /* Add a left border to highlight the paragraph */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-certification-text span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-education-text{
+  border-left: 5px solid #5a3ebc; /* Add a left border to highlight the paragraph */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-education-text span {
+  display: block;
+  margin-bottom: 10px;
+}
+.about-education-text .main-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.about-education-text .sub-text {
+  font-size: 0.9rem;
+  color: #2b2a2a;
+  margin-left: 10px; /* Indent the subtext slightly for a hierarchical look */
+  display: block;
+  margin-top: -24px; /* Adjust the spacing between the main text and subtext */
+  /* Italicize the subtext for emphasis */
+}
+
+.about-education-text .main-text:not(:last-child) {
+  margin-bottom: 10px; /* Add space between different education entries */
+}
+
+.about-education-text .sub-text:not(:last-child) {
+  margin-bottom: 15px; /* Add more space after subtext to separate education entries */
+}
+
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 15rem 1rem; /* Adjust padding for mobile view */
+  }
+
+  .about-row {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 1rem; /* Adjust gap for mobile view */
+  }
+
+  .about-intro-image-container {
+    margin: 0; /* Remove margins */
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center;
+    gap: 1.5rem; /* Space between image and content */
+  }
+
+  .about-image {
+    margin: 0; /* Remove margins */
+  }
+
+  .about-image img {
+    width: 150px; /* Adjust width for mobile view */
+    height: 150px; /* Adjust height for mobile view */
+  }
+
+  .about-content {
+    margin: 0; /* Remove margins */
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .about-content h3 {
+    font-size: 2.4rem; /* Adjust font size for mobile */
+    margin-bottom: 0.5rem; /* Reduce bottom margin */
+  }
+
+  .about-content .about-tag {
+    font-size: 1.4rem; /* Adjust font size for mobile */
+  }
+
+  .about-content p {
+    font-size: 1.4rem; /* Adjust font size for mobile */
+    line-height: 1.6; /* Adjust line-height for better readability */
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center-align text for mobile */
+    margin-top: 1rem; /* Adjust top margin */
+  }
+
+  .about-content p::before,
+  .about-content p::after {
+    display: none; /* Remove inverted commas */
+  }
+
+  .about-buttons {
+    margin-top: 1.5rem; /* Adjust button margin */
+    text-align: center; /* Center-align buttons */
+    margin-right: 25%;
+  }
+
+  .about-buttons .about-button {
+    font-size: 1.3rem; /* Adjust font size for mobile */
+    padding: 0.5rem 1rem; /* Adjust padding for mobile */
+  }
+
+  .about-cards-container {
+    display: none; /* Hide cards on smaller screens */
+  }
+}
+
+
+/* Handling view port for iPad mini specifically */
+@media (min-width: 768px){
+  .about-section {
+    padding: 8rem 2rem;
+  }
+
+  .about-row {
+    gap: 0; /* Adjust gap as needed */
+  }
+
+  .about-intro-image-container {
+    margin-left: 1.5%;
+    margin-top: 3%;
+    margin-right: 1.5%;
+  }
+
+  .about-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-content h3 {
+    font-size: 2.8rem;
+  }
+
+  .about-content .about-tag {
+    font-size: 1.4rem;
+  }
+
+  .about-content p {
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+  }
+
+  .about-buttons {
+    margin-top: 1.5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .about-buttons .about-button {
+    font-size: 1.4rem;
+  }
+
+  
+  .about-content p::before,
+  .about-content p::after {
+    display: none; /* Remove inverted commas */
+  }
+
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-section {
+    padding: 8rem 2rem;
+  }
+
+  .about-row {
+    gap: 5rem; /* Adjust gap as needed */
+  }
+
+  .about-intro-image-container {
+    margin-left: 1.5%;
+    margin-top: 3%;
+    margin-right: 1.5%;
+  }
+
+  .about-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-content h3 {
+    font-size: 2.8rem;
+  }
+
+  .about-content .about-tag {
+    font-size: 1.4rem;
+  }
+
+  .about-content p {
+    font-size: 1.4rem;
+    padding: 0 0.5rem;
+  }
+
+  .about-buttons {
+    margin-top: 1.5rem;
+    margin-left: 22%;
+    margin-right: auto;
+  }
+
+  .about-buttons .about-button {
+    font-size: 1.3rem; /* Adjust font size for mobile */
+    padding: 0.5rem 1rem; /* Adjust padding for mobile */
+  }
+
+  
+  .about-content p::before,
+  .about-content p::after {
+    display: none; /* Remove inverted commas */
+  }
+
+  .about-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .about-certification-card,
+  .about-education-card {
+    width: 40%; /* Adjust width as needed */
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+
+  .about-certification-card:hover,
+  .about-education-card:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 450px) and (max-height: 643px) {
+  .about-buttons {
+    margin-top: 1.5rem; /* Adjust button margin */
+    text-align: center; /* Center-align buttons */
+  }
+
+  .about-buttons .about-button {
+    font-size: 1.3rem; /* Adjust font size for mobile */
+    padding: 0.5rem 1rem; /* Adjust padding for mobile */
+  }
+}
+
+
+

@@ -1,0 +1,346 @@
+
+.contact {
+  
+    margin-top: 1%;
+    padding: 60px 0; /* Adds vertical padding to the section */
+    background: #fff; /* Sets a white background color */
+    overflow-y: hidden;
+    overflow: hidden; /* Hides overflow content */
+    position: relative; /* Positions the element relative to its normal position */
+    z-index: 1; /* Sets the stack order of the element */
+  }
+  
+  .contact::before {
+    content: ''; /* Inserts an empty content */
+    position: absolute; /* Positions the element absolutely */
+    margin-top: 4%; /*Moves the element 10% above its normal position */
+    left: 0; /* Aligns the element to the left */
+    width: 100%; /* Sets the width to 100% */
+    height: 100%; /* Sets the height to 100% */
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(0,0,0,0.05)); /* Adds a gradient background */
+    z-index: -1; /* Positions the element behind other elements */
+    animation: rotateBg 20s linear infinite; /* Applies a rotating background animation */
+  }
+  
+  @keyframes rotateBg {
+    0% { transform: rotate(0deg); } /* Starts rotation at 0 degrees */
+    100% { transform: rotate(360deg); } /* Ends rotation at 360 degrees */
+  }
+  
+  .section-title {
+    font-size: 2.5em; /* Sets the font size */
+    font-weight: 700; /* Sets the font weight to bold */
+    text-align: center; /* Centers the text */
+    margin-bottom: 10px; /* Adds a bottom margin */
+    color: #333; /* Sets the text color */
+    animation: fadeInDown 1s ease-in-out; /* Applies a fade-in animation */
+  }
+  
+  .section-subtitle {
+    text-align: center; /* Centers the text */
+    font-size: 1.2em; /* Sets the font size */
+    font-weight: 400; /* Sets the font weight to normal */
+    color: #777; /* Sets the text color */
+    margin-bottom: 40px; /* Adds a bottom margin */
+    animation: fadeInUp 1s ease-in-out; /* Applies a fade-in animation */
+  }
+  
+  @keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); } /* Starts with the element transparent and moved up */
+    100% { opacity: 1; transform: translateY(0); } /* Ends with the element fully visible and in its normal position */
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); } /* Starts with the element transparent and moved down */
+    100% { opacity: 1; transform: translateY(0); } /* Ends with the element fully visible and in its normal position */
+  }
+  
+  .contact .container {
+    max-width: 100%; /* Sets the maximum width */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 20px; /* Adds horizontal padding */
+  }
+  
+  .contact .content {
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 20px; /* Adds horizontal padding */
+    max-width: 800px; /* Sets the maximum width of the container*/
+    display: flex; /* Uses flexbox layout */
+    justify-content: center; /* Centers the content horizontally */
+    animation: fadeIn 1s ease-in-out; /* Applies a fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; } /* Starts with the element transparent */
+    100% { opacity: 1; } /* Ends with the element fully visible */
+  }
+  
+  .contact #contact-form {
+    /* margin-bottom: 2%; */
+    width: 100%; /* Sets the width to 100% */
+    background: #fff; /* Sets a white background color */
+    padding: 20px; /* Adds padding */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a shadow effect */
+  }
+  
+  .contact .form-group {
+    display: flex; /* Uses flexbox layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Adds space between items */
+  }
+  
+  .contact .field,
+  .contact .message {
+    position: relative; /* Positions the element relative to its normal position */
+    width: 100%; /* Sets the width to 100% */
+  }
+  
+  .contact .field input,
+  .contact .message textarea {
+    width: 100%; /* Sets the width to 100% */
+    padding: 15px 20px; /* Adds padding */
+    padding-left: 40px; /* Adds left padding to make room for icons */
+    border: 1px solid #ddd; /* Sets a border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 1.3em; /* Sets the font size */
+    font-weight: 600; /* Sets the font weight to semi-bold */
+    font-family: cursive; /* Sets the font family */
+    color: #333; /* Sets the text color */
+    background: #fff; /* Sets a white background color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a shadow effect */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Adds transition effects */
+  }
+  
+  .contact .field input:focus,
+  .contact .message textarea:focus {
+    border-color: #007bff; /* Changes the border color on focus */
+    box-shadow: 0 4px 12px rgba(0,123,255,0.2); /* Changes the shadow effect on focus */
+    outline: none; /* Removes the default outline */
+  }
+  
+  .contact .field i,
+  .contact .message i {
+    position: absolute; /* Positions the element absolutely */
+    left: 10px; /* Positions the element to the left */
+    top: 50%; /* Positions the element to the middle */
+    transform: translateY(-50%); /* Adjusts the vertical position */
+    color: #aaa; /* Sets the icon color */
+    font-size: 1.3em; /* Sets the icon size */
+    transition: color 0.3s; /* Adds a transition effect */
+  }
+  
+  .contact .icon-1 i{ 
+    top: 15%; /* Adjusts the top position for specific icons */
+  }
+  
+  .contact .field input:focus + i,
+  .contact .message textarea:focus + i {
+    color: #007bff; /* Changes the icon color on focus */
+  }
+  
+  .contact .message textarea {
+    height: 150px; /* Sets the height */
+    resize: none; /* Disables resizing */
+  }
+  
+  .contact .button-area {
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds a top margin */
+  }
+  
+  .contact .button-area button {
+    background-color: #007bff; /* Sets the background color */
+    color: #fff; /* Sets the text color */
+    padding: 10px 25px; /* Adds padding */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 1.2em; /* Sets the font size */
+    font-weight: 600; /* Sets the font weight to semi-bold */
+    cursor: pointer; /* Changes the cursor to pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Adds transition effects */
+    box-shadow: 0 4px 8px rgba(0,123,255,0.2); /* Adds a shadow effect */
+  }
+  
+  .contact .button-area button:hover {
+    background-color: #0056b3; /* Changes the background color on hover */
+    transform: translateY(-2px); /* Moves the button up slightly on hover */
+  }
+  
+  .contact .button-area button i {
+    margin-left: 5px; /* Adds left margin */
+  }
+  
+  
+  /* contact section media queries ends */
+  /* contact section ends */
+  
+  /****************************************************************************************************************************************************************/
+  
+  /* Container for the bottom info */
+  .bottom-info {
+    margin-top: 2%;
+    height: 4cm; /* Sets the height */
+    width: 100%; /* Sets the width to 100% */
+    background-color: #000; /* Sets a black background color */
+    color: #fff; /* Sets the text color to white */
+    display: flex; /* Uses flexbox layout */
+    flex-direction: column; /* Arranges items in a column */
+    justify-content: space-between; /* Adds space between items */
+    align-items: center; /* Centers items horizontally */
+    padding: 1em; /* Adds padding */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+  }
+  
+  /* Contact content styling */
+  .contact-content {
+    text-align: left; /* Aligns text to the left */
+    width: 30%; /* Sets the width to 30% */
+  }
+  
+  .contact-content h3 {
+    font-size: 1.5em; /* Sets the font size */
+    font-family: 'Arial', sans-serif; /* Sets a different font style */
+    margin-bottom: 0.5em; /* Adds a bottom margin */
+    text-transform: uppercase; /* Converts text to uppercase */
+  }
+  
+  .contact-content p {
+    margin: 0.3em 0; /* Adds vertical margins */
+  }
+  
+  .contact-content i {
+    margin-right: 0.5em; /* Adds right margin */
+  }
+  
+  /* Social share styling */
+  .social-share {
+    display: flex; /* Uses flexbox layout */
+    gap: 1em; /* Adds space between items */
+    align-items: center; /* Centers items vertically */
+  }
+  
+  .social-share a {
+    font-size: 2em; /* Sets the font size */
+    color: #fff; /* Sets the icon color to white */
+    transition: transform 0.3s ease, color 0.3s ease; /* Adds transition effects */
+  }
+  
+  .linked a:hover {
+    transform: scale(1.2); /* Scales the icon on hover */
+    color: #0077b5; /* LinkedIn blue */
+  }
+  
+  .insta a:hover {
+    transform: scale(1.2); /* Scales the icon on hover */
+    color: #e4405f; /* Instagram pink */
+  }
+  
+  .github a:hover {
+    transform: scale(1.2); /* Scales the icon on hover */
+    color: #333; /* GitHub black (dark grey) */
+  }
+  
+  .mail a:hover {
+    transform: scale(1.2); /* Scales the icon on hover */
+    color: #ea4335; /* Gmail red */
+  }
+  
+  .twitter a:hover {
+    transform: scale(1.2); /* Scales the icon on hover */
+    color: #1da1f2; /* Twitter blue */
+  }
+  
+  
+  /* Bottom box styling */
+  .bottom-box {
+    text-align: center; /* Centers the text */
+    width: 100%; /* Sets the width to 100% */
+    flex: 1; /* Allows the element to grow and shrink */
+    max-width: 60%; /* Sets the maximum width */
+    margin: 0 auto;
+  }
+  
+  .credit-info {
+    font-size: 1.4em; /* Sets the font size to make it clearer */
+    font-weight: bold; /* Sets the font weight to bold */
+    margin-bottom: 0.5em; /* Adds a bottom margin */
+    font-family: 'Verdana', sans-serif; /* Sets the font family */
+  }
+  
+  .credit-info .fa-heart {
+    color: red; /* Sets the heart color to red */
+  }
+  
+  .credit-info a {
+    color: #4f91ed; /* Sets the color of Vikas Kumar to white */
+  }
+  
+  .credit-info a:hover {
+    color: #fff; /* Changes the color of Vikas Kumar to blue on hover */
+  }
+  
+  .para-tag {
+    font-size: 1.2em; /* Sets the font size */
+    margin-top: 0; /* Removes top margin */
+    line-height: 1.5em; /* Sets the line height for readability */
+    font-family: 'Verdana', sans-serif; /* Sets the font family */
+  }
+  
+  /* Flexbox for layout */
+  .bottom-info {
+    display: flex; /* Uses flexbox layout */
+    justify-content: space-between; /* Adds space between items */
+    align-items: center; /* Centers items vertically */
+    padding: 1em 2em; /* Adds padding */
+  } 
+  
+  .contact-content {
+    flex: 1; /* Allows the element to grow and shrink */
+    max-width: 30%; /* Sets the maximum width */
+  }
+  .social-share {
+    flex: 1; /* Allows the element to grow and shrink */
+    justify-content: flex-end; /* Aligns items to the right */
+    max-width: 30%; /* Sets the maximum width */
+  }
+  
+  
+  /****************************************************************************************************************************************************************/
+
+  
+  /* scroll top starts */
+  #scroll-top {
+    position: fixed;
+    top: -140%;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    background: #794efc;
+    color: #000;
+    border-radius: 50%; 
+    transition: 1s linear;
+    z-index: 1000;
+  }
+  
+  #scroll-top.active {
+    top: calc(100% - 8rem); /* Adjusted this value to move it further down */
+  }
+  /* scroll top ends */
+  
+  
+  
+  
+  
+  @media (min-width: 768px) {
+    .contact .form-group .field,
+    .contact .form-group .message {
+        width: calc(50% - 10px); /* Sets the width for larger screens */
+    }
+  
+    .contact .message {
+        width: 100%; /* Sets the width to 100% for larger screens */
+    }
+  }
+
+  

@@ -1,0 +1,264 @@
+.home {
+    margin-top: 3.5%;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+    text-align: center; 
+    padding: 2rem 1rem; 
+  }
+  .home #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .home .content {
+    flex: 1 1 40rem;
+    padding-top: 1rem;
+    z-index: 1;
+  }
+  .home .image {
+    margin-left: -2%;
+    flex: 1 1 25rem; 
+    z-index: 1;
+  }
+  .home .image img {
+    width: 60%; 
+    margin-left: 2.5rem;
+    border-radius: 50%; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3),
+                0 10px 20px rgba(0, 0, 0, 0.2),
+                0 15px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .home .image img:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5),
+                0 15px 30px rgba(0, 0, 0, 0.4),
+                0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05); 
+  }
+  .home .content h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #012b72;
+  }
+  .home .content h2 span {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #012b72; 
+  }
+  .home .content p {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+  .home .typing-text{
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 600;
+    padding: 1rem 0;
+    font-family: cursive;
+  }
+  
+  .home .content p span {
+    font-size: 2.5rem;
+    color: rgb(232, 11, 11);
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+  .home .btn {
+    margin-left: -8.5rem;
+    margin-top: 1rem;
+    position: absolute;
+    line-height: 0;
+    padding: 1.6rem 3rem;
+    border-radius: 4em;
+    transition: 0.5s;
+    color: #fff;
+    background: #2506ad;
+    box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
+    font-family: "Nunito", sans-serif;
+  }
+  .home .btn span {
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+  }
+  .home .btn i {
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+  .home .btn:hover {
+    background: #1a047e;
+  }
+  .home .btn:hover i {
+    transform: translateX(5px);
+  }
+
+
+  .socials {
+    position: relative;
+    margin-top: 9rem;
+  }
+  .socials .social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .socials .social-icons li {
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .social-icons a {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 44px;
+    color: #00d9ff;
+    background-color: #09011b;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .social-icons a:active,
+  .social-icons a:focus,
+  .social-icons a:hover {
+    color: #fff;
+    background-color: #0685da;
+  }
+  .social-icons a.github:hover {
+    background-color: #0e0e0e;
+  }
+  .social-icons a.twitter:hover {
+    background-color: #00aced;
+  }
+  .social-icons a.linkedin:hover {
+    background-color: #007bb6;
+  }
+  .social-icons a.instagram:hover {
+    background-color: #ee00da;
+  }
+ 
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .home {
+      flex-direction: column;
+      text-align: center;
+      padding: 4rem 2rem; 
+    }
+    .home .image {
+      flex: 1 1 30rem;
+      margin: 0 auto 3rem; 
+      order: -1; 
+    }
+    .home .image img {
+      margin-top: 80%;
+      width: 50%; 
+    }
+    .home .content {
+      margin-top: 0; 
+    }
+    .home .content h2 {
+      font-size: 4rem; 
+    }
+    .home .content p {
+      font-size: 2.2rem;
+      margin: 1.5rem 0; 
+    }
+    .home .btn {
+      padding: 1.4rem 2.5rem;
+      margin-top: 2.5rem; 
+    }
+  }
+  
+  
+  @media (max-width: 1024px) and (max-height: 600px) {
+    .home {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .home .image {
+      flex: 1 1 25rem;
+      margin: 0 auto;
+      order: -1; 
+    }
+    .home .image img {
+      
+      width: 45%; 
+      margin-top: 10%;
+    }
+    .home .content {
+      flex: 1 1 40rem;
+      padding-top: 0.5rem;
+      margin-bottom: 1%;
+    }
+    .home .content h2 {
+      font-size: 3.5rem;
+    }
+    .home .content p {
+      font-size: 2rem;
+    }
+    .home .btn {
+      padding: 1.4rem 2.5rem;
+    }
+  }
+ 
+
+
+@media (max-width: 768px){
+    .home {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .home .image {
+      flex: 1 1 20rem;
+      margin: 0 auto 2rem;
+      order: -1; 
+    }
+    .home .image img {
+      margin-top: 20%;
+      width: 60%; 
+    }
+    .home .content {
+      margin-top: 0; 
+    }
+    .home .content h2 {
+      font-size: 3.5rem;
+    }
+    .home .content p {
+      font-size: 2rem;
+      margin: 1rem 0; 
+    }
+    .home .btn {
+      padding: 1.2rem 2rem;
+      margin-top: 2rem;
+    }
+}
+
+
+
+
+
+
