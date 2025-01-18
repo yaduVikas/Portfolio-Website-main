@@ -71,10 +71,10 @@ $(document).ready(function () {
     // Change document title and favicon on visibility change
     document.addEventListener('visibilitychange', function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Vikas Yadu";
+            document.title = "Portfolio | Vikash Kumar";
             $("#favicon").attr("href", "assets/images/atom.png");
         } else {
-            document.title = "Portfolio | Vikas Yadu";
+            document.title = "Portfolio | Vikash Kumar";
             $("#favicon").attr("href", "assets/images/atom.png");
         }
     });

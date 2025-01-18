@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id='favicon' rel="shortcut icon" href="./assets/images/atom.png">
+  <title>Gallary | Vikash Kumar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fancy Picture Frame Styling */
+    body {
+      background-color: #282c34; /* Dark background for contrast */
+    }
+
+    .frame {
+      position: relative;
+      display: inline-block;
+      padding: 15px;
+      background: linear-gradient(135deg, #ff6b6b, #f7d94a); /* Vibrant frame colors */
+      border: 8px solid transparent;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      transform: scale(1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .frame:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .frame img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px auto 0; /* Top margin of 20px, centered */
+    }
+
+    .frame .caption {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #333;
+      background: rgba(255, 255, 255, 0.9); /* Light caption background */
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Center the fifth frame image further */
+    .design {
+      margin-top: 5%;   
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90%; /* Ensure it takes full height of the frame */
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-5">
+  <div class="grid grid-cols-3 gap-5">
+    <!-- First Row -->
+    <div class="grid grid-cols-2 gap-5 col-span-2">
+      <!-- Frame 1 -->
+      <div class="frame">
+        <img src="./assets/images/SIH.jpeg" alt="Image 1">
+        <div class="caption">Team Bhishma SIH 2024</div>
+      </div>
+
+      <!-- Frame 2 -->
+      <div class="frame">
+        <img src="./assets/images/vikash_sih.jpeg" alt="Image 2">
+        <div class="caption">SIH 2024</div>
+      </div>
+
+      <!-- Frame 3 -->
+      <div class="frame">
+        <img src="./assets/images/nptel_iot.jpg" alt="Image 3">
+        <div class="caption">Silver certificate on IOT</div>
+      </div>
+
+      <!-- Frame 4 -->
+      <div class="frame">
+        <img src="./assets/images/nptel_java.jpg" alt="Image 4">
+        <div class="caption">Certificate of Programming in Java</div>
+      </div>
+    </div>
+
+    <!-- Fifth Frame (Last Column) -->
+    <div class="frame col-span-1 h-full">
+      <div class="design">
+        <img src="./assets/images/level2.jpg" alt="Image 5">
+      </div>
+      <div class="caption">Level-2 certificate of Project Completion e-Yantra</div>
+    </div>
+  </div>
+</body>
+</html>

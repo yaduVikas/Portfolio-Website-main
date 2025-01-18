@@ -127,8 +127,8 @@
 }
 
 .about-cards-container {
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content: right;
   gap: 2rem;
   /* margin-top: 2rem; */
 }
