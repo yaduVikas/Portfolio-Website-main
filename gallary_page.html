@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link id='favicon' rel="shortcut icon" href="./assets/images/atom.png">
-  <title>Gallary | Vikash Kumar</title>
+  <title>Gallery | Vikash Kumar</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     /* Fancy Picture Frame Styling */
@@ -61,9 +61,9 @@
   </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-5">
-  <div class="grid grid-cols-3 gap-5">
-    <!-- First Row -->
-    <div class="grid grid-cols-2 gap-5 col-span-2">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <!-- First Section: Two Rows -->
+    <div class="grid grid-cols-2 gap-5 col-span-1 md:col-span-2">
       <!-- Frame 1 -->
       <div class="frame">
         <img src="./assets/images/SIH.jpeg" alt="Image 1">
@@ -89,8 +89,8 @@
       </div>
     </div>
 
-    <!-- Fifth Frame (Last Column) -->
-    <div class="frame col-span-1 h-full">
+    <!-- Second Section: Single Frame -->
+    <div class="frame col-span-1">
       <div class="design">
         <img src="./assets/images/level2.jpg" alt="Image 5">
       </div>
