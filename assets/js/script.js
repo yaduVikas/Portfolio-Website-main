@@ -40,39 +40,32 @@ $(document).ready(function () {
     });
 
     // Contact form submission
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent default form submission
-
-    const formData = new URLSearchParams(new FormData(this));
-
-    fetch('http://localhost:3000/send-email', { // Ensure the URL matches your server
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();
-    })
-    .then(result => {
-        console.log('Server response:', result); // Debugging
-        if (result.trim() === 'Email sent successfully') { // Trim any extra spaces or newlines
-            alert('Form Submitted Successfully');
-            document.getElementById('contact-form').reset(); // Reset the form
-        } else {
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        const formData = new URLSearchParams(new FormData(this));
+    
+        fetch('http://localhost:3000/send-email', { // Ensure the URL matches your server
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            if (result === 'Email sent successfully') {
+                alert('Form Submitted Successfully');
+                document.getElementById('contact-form').reset(); // Reset the form
+            } else {
+                alert('Form Submission Failed! Try Again');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
             alert('Form Submission Failed! Try Again');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Form Submission Failed! Try Again');
+        });
     });
-});
-
     
 
     // Change document title and favicon on visibility change
