@@ -39,7 +39,7 @@ $(document).ready(function () {
         }, 500, 'linear');
     });
 
-    // Contact form submission
+// Contact form submission
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
@@ -53,14 +53,12 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         body: formData
     })
     .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.text();
+        console.log('Response Status:', response.status); // Log response status
+        return response.json(); // Parse JSON response
     })
     .then(result => {
         console.log('Server response:', result); // Debugging
-        if (result.trim() === 'Email sent successfully') { // Trim any extra spaces or newlines
+        if (result.status === 'success') { // Check status in JSON response
             alert('Form Submitted Successfully');
             document.getElementById('contact-form').reset(); // Reset the form
         } else {
@@ -72,6 +70,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         alert('Form Submission Failed! Try Again');
     });
 });
+
 
     
 
