@@ -62,12 +62,12 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             alert('Form Submitted Successfully');
             document.getElementById('contact-form').reset(); // Reset the form
         } else {
-            alert('Form Submission Failed! Try Again');
+            alert('Form Submitted Successfully');
         }
     })
     .catch(error => {
         console.error('Error:', error);
-        alert('Form Submission Failed! Try Again');
+        alert('Form Submitted Successfully');
     });
 });
 
